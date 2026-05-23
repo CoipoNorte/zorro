@@ -1,0 +1,29 @@
+{
+  "name": "zorro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ZORRO — Generador de Paletas de Colores Profesionales",
+  "main": "main.cjs",
+  "author": "CoipoNorte",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron": "wait-on tcp:5173 && electron .",
+    "start": "concurrently \"npm run dev\" \"npm run electron\"",
+    "dist": "npm run build && npx electron-builder --win --config electron-builder.yml"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.2.1",
+    "electron": "33.0.0",
+    "electron-builder": "26.8.1",
+    "vite": "^6.0.0",
+    "wait-on": "^8.0.5"
+  }
+}

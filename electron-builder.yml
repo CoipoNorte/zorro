@@ -1,0 +1,28 @@
+appId: com.zorro.palette
+productName: ZORRO
+forceCodeSigning: false
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+  icon: assets/zorro.ico
+  requestedExecutionLevel: asInvoker
+  signAndEditExecutable: false
+portable:
+  artifactName: ZORRO.exe
+directories:
+  output: release
+files:
+  - dist/**/*
+  - main.cjs
+  - preload.cjs
+  - assets/**/*
+  - package.json
+  - "!src/**/*"
+  - "!public/**/*"
+asar: true
+compression: maximum
+extraResources:
+  - from: assets
+    to: assets
